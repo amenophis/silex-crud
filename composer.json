@@ -1,0 +1,25 @@
+{
+    "name": "amenophis/silex-admin",
+    "type": "library",
+    "description": "Reusable Administration for Silex",
+    "keywords": ["silex", "administration"],
+    "homepage": "https://github.com/Amenophis/silex-admin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jérémy LEHERPEUR",
+            "email": "jeremy@leherpeur.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "doctrine/orm": "dev-master",
+        "amenophis/silex-doctrineorm": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Amenophis": "src"
+        }
+    }
+}
