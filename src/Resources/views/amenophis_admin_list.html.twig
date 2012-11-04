@@ -1,0 +1,40 @@
+{% block amenophis_admin_list %}
+    {% if items|length > 0 %}
+        <table>
+            <tr>
+                {% for column in options.list.fields %}
+                    <th>{{ options.fields[column].label }}</th>
+                {% endfor %}
+                            
+                {#{% for action_key, action in options.list.actions %}
+                    {% block amenophis_admin_list_action %}
+                    <th></th>
+                    {% endblock %}
+                {% endfor %}#}
+            </tr>
+        {% for item in items %}
+            <tr>
+                {% for column in options.list.fields %}
+                    <td>{{ eval("{{item." ~ column ~ "}}") }}</td>
+                {% endfor %}
+                    
+                {#{% for action_key, action in options.list.actions %}
+                    <td>
+                        {% if action_key == 'edit' and action == true %}
+                            {% block amenophis_admin_list_edit %}
+                                <a href="{{ path(options.route ~ '_edit', {'id': item.id }) }}">Edit</a>
+                            {% endblock %}
+                        {% elseif action_key == 'delete' and action == true %}
+                            {% block amenophis_admin_list_delete %}
+                                <a href="{{ path(options.route ~ '_delete', {'id': item.id }) }}">Delete</a>
+                            {% endblock %}
+                        {% else %}
+                            action
+                        {% endif %}
+                    </td>
+                {% endfor %}#}
+            </tr>
+        {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}
