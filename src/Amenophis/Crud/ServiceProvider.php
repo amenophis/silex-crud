@@ -11,7 +11,7 @@ class ServiceProvider implements \Silex\ControllerProviderInterface
         $config = \Symfony\Component\Yaml\Yaml::parse($config_file);
         
         $processor = new \Symfony\Component\Config\Definition\Processor();
-        $configuration = new ServiceConfiguration();
+        $configuration = new Configuration();
         $this->options = $processor->processConfiguration($configuration, array($config));
      }
     
