@@ -8,9 +8,9 @@ use Symfony\Component\Config\Definition\Processor;
 class ProviderFactory
 {
     /**
-     * 
-     * @param type $configFilename
-     * @return \Amenophis\Crud\ServiceProvider
+     * Create a new ServiceProvider instance
+     * @param String $configFilename Yml configuration file
+     * @return \Amenophis\Crud\ServiceProvider Newly created instance
      */
     public static function create($configFilename)
     {
