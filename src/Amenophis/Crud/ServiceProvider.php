@@ -6,14 +6,10 @@ class ServiceProvider implements \Silex\ControllerProviderInterface
     public $options;
     public $repository;
     
-    public function __construct($config_file)
+    public function __construct($options = array())
     {
-        $config = \Symfony\Component\Yaml\Yaml::parse($config_file);
-        
-        $processor = new \Symfony\Component\Config\Definition\Processor();
-        $configuration = new Configuration();
-        $this->options = $processor->processConfiguration($configuration, array($config));
-     }
+        $this->options = $options;
+    }
     
     public function init(\Silex\Application $app) {
         if(!$this->repository = $app['db.orm.em']->getRepository($this->options['entity'])) throw new \Exception(printf("Repository for Entity '%s' not found", $this->options['entity']));
