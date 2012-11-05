@@ -28,22 +28,22 @@ class ServiceProvider implements \Silex\ControllerProviderInterface
                 'options' => $that->options
             ));
         })
-        ->bind($that->options['route']);
+        ->bind($this->options['route']);
         
         $controllers->match('/add', function() use ($that, $app){
             return "";
         })
-        ->bind($that->options['route'].'_add');
+        ->bind($this->options['route'].'_add');
         
         $controllers->match('/{id}/edit', function($id) use ($that, $app){
             return "";
         })
-        ->bind($that->options['route'].'_edit');
+        ->bind($this->options['route'].'_edit');
         
         $controllers->match('/{id}/delete', function() use ($that, $app){
             return "";
         })
-        ->bind($that->options['route'].'_delete');
+        ->bind($this->options['route'].'_delete');
         
         return $controllers;
     }
