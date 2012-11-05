@@ -14,6 +14,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->scalarNode('layout')->end()
                 ->arrayNode('list')
                     ->children()
                         ->variableNode('fields')->end()
