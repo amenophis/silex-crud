@@ -1,16 +1,16 @@
 <?php
 
-namespace Amenophis\Admin\Configuration;
+namespace Amenophis\CRUD\Configuration;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
-class AdminConfiguration implements ConfigurationInterface
+class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('admin');
+        $rootNode = $treeBuilder->root('crud');
 
         $rootNode
             ->children()

@@ -1,7 +1,7 @@
 <?php
-namespace Amenophis\Admin\ControllerProvider;
+namespace Amenophis\CRUD\ControllerProvider;
 
-class Admin implements \Silex\ControllerProviderInterface
+class Provider implements \Silex\ControllerProviderInterface
 {
     public $options;
     public $repository;
