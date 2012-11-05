@@ -1,11 +1,11 @@
 <?php
 
-namespace Amenophis\CRUD\Configuration;
+namespace Amenophis\Crud;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
-class Configuration implements ConfigurationInterface
+class ServiceConfiguration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {

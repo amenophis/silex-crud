@@ -1,7 +1,7 @@
 <?php
-namespace Amenophis\CRUD\ControllerProvider;
+namespace Amenophis\Crud;
 
-class Provider implements \Silex\ControllerProviderInterface
+class ServiceProvider implements \Silex\ControllerProviderInterface
 {
     public $options;
     public $repository;
@@ -11,7 +11,7 @@ class Provider implements \Silex\ControllerProviderInterface
         $config = \Symfony\Component\Yaml\Yaml::parse($config_file);
         
         $processor = new \Symfony\Component\Config\Definition\Processor();
-        $configuration = new \Amenophis\Admin\Configuration\AdminConfiguration();
+        $configuration = new ServiceConfiguration();
         $this->options = $processor->processConfiguration($configuration, array($config));
      }
     
