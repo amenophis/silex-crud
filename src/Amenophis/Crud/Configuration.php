@@ -5,7 +5,7 @@ namespace Amenophis\Crud;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
-class ServiceConfiguration implements ConfigurationInterface
+class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
