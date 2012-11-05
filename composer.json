@@ -1,9 +1,9 @@
 {
-    "name": "amenophis/silex-admin",
+    "name": "amenophis/silex-crud",
     "type": "library",
-    "description": "Reusable Administration for Silex",
-    "keywords": ["silex", "administration"],
-    "homepage": "https://github.com/Amenophis/silex-admin",
+    "description": "CRUD for Silex",
+    "keywords": ["silex", "crud"],
+    "homepage": "https://github.com/Amenophis/silex-crud",
     "license": "MIT",
     "authors": [
         {
